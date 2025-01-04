@@ -153,7 +153,7 @@ body {
 }
 
 .myPhoto {
-    animation: fade 2s;
+    animation: fade 1.5s;
 }
 
 @keyframes fade {
@@ -319,7 +319,7 @@ body {
 }
 
 .img4 {
-    background-image: url("Partial\ Clone\ of\ edX.png");
+    background-image: url("Partial\ clone\ of\ edX.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
