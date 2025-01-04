@@ -1,0 +1,361 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans";
+}
+
+body {
+    background-color: #f1faee;
+    color: #1d3557;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+html {
+    font-size: 16px;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 18rem minmax(18rem, 50rem);
+    grid-template-rows: 18rem;
+    grid-template-areas:
+        "projectImg projectDes";
+    gap: 20px;
+    box-shadow: 0px 0px 10px #a8dadc;
+}
+
+.gridIntroContainer {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 18rem minmax(auto, 800px);
+    grid-template-rows: 20rem;
+    grid-template-areas:
+        "projectImg projectDes";
+    gap: 80px;
+    width: 90vw;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.myPhoto {
+    height: 22rem;
+    width: 22rem;
+}
+
+.myPhotoContainer {
+    height: 22rem;
+    width: 22rem;
+}
+
+@media (max-width:695px) {
+    .gridContainer {
+        grid-template-columns: 18rem;
+        grid-template-rows: 18rem 25rem;
+        gap: 20px;
+        grid-template-areas:
+            "projectImg"
+            "projectDes";
+    }
+
+}
+
+@media (max-width:930px) and (min-width:831px) {
+    .gridIntroContainer {
+        padding-left: 15px;
+        padding-right: 15px;
+        gap: 30px;
+    }
+
+    .myAbout {
+        padding-bottom: 0px;
+    }
+}
+
+@media (max-width:830px) {
+    .gridIntroContainer {
+        grid-template-columns: 20rem;
+        grid-template-rows: 20rem 1fr;
+        gap: 10px;
+        grid-template-areas:
+            "projectImg projectDes";
+        align-items: center;
+        justify-content: center;
+        padding-left: 15px;
+        padding-right: 15px;
+        /* padding:20px; */
+        /* padding-bottom:40px; */
+        /* width:20rem; */
+    }
+
+    .myPhoto {
+        height: 22rem;
+        width: 22rem;
+    }
+
+    .myPhotoContainer {
+        height: 22rem;
+        width: 22rem;
+    }
+}
+
+@media (max-width:750px) and (min-width:501px) {
+    .gridIntroContainer {
+        grid-template-columns: auto;
+        grid-template-rows: 18rem 1fr;
+        gap: 20px;
+        place-items: center;
+        grid-template-areas:
+            "projectImg"
+            "projectDes";
+        align-items: center;
+        justify-content: center;
+        width: 95vw;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .myPhoto {
+        height: 18rem;
+        width: 18rem;
+    }
+}
+
+@media (max-width:500px) {
+    .gridIntroContainer {
+        grid-template-columns: 18rem;
+        grid-template-rows: 18rem 1fr;
+        gap: 20px;
+        grid-template-areas:
+            "projectImg"
+            "projectDes";
+        align-items: center;
+        justify-content: center;
+        width: 95vw;
+    }
+
+    .myPhoto {
+        height: 18rem;
+        width: 18rem;
+    }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.myPhoto {
+    animation: fade 2s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.myPhotoContainer {
+    border-radius: 50%;
+    grid-area: projectImg;
+    height: 18rem;
+    width: 18rem;
+}
+
+@keyframes slide-left {
+    from {
+        opacity: 0.4;
+        transform: translateX(100px);
+    }
+}
+
+.myAbout {
+    color: #1d3557;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    animation: slide-left 2s;
+}
+
+.myAbout>span {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.myAbout>div>a>i {
+    font-size: 2rem;
+    margin-right: 1rem
+}
+
+.lineStyle {
+    height: 5px;
+    width: 150px;
+    background-color: #780000;
+    margin-bottom: 20px;
+}
+
+.myName {
+    margin: 0.6rem 0rem 0.6rem 0rem;
+    font-size: 2rem;
+    color: #1d3557;
+}
+
+.myAbout>h3 {
+    font-size: larger;
+    color: 003049;
+}
+
+.profileLinks {
+    margin-top: 15px;
+}
+
+.imgContainer {
+    box-shadow: 0px 0px 10px #fdf0d5;
+    border-radius: 1.5rem;
+    grid-area: projectImg;
+}
+
+.description {
+    grid-area: projectDes;
+}
+
+.projAbout {
+    display: flex;
+    flex-direction: column;
+}
+
+.projAbout>h1 {
+    display: inline-block;
+}
+
+.skills {
+    margin-top: 30px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title>a {
+    color: #f1faee;
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+.projAbout>div>span {
+    padding: 10px;
+    background-color: rgba(168, 218, 220, 0.3);
+    color: #f1faee;
+    border-radius: 0.6rem;
+    margin: 0px 10px 0px 0px;
+}
+
+.projAbout>p {
+    font-size: larger;
+}
+
+.projects {
+    color: #003049;
+}
+
+.projContainer {
+    box-shadow: 0px 0px 10px #a8dadc;
+    background-color: #003049;
+    color: #f1faee;
+    padding: 15px 10px 15px 10px;
+    animation: slide-up 2s;
+    margin-bottom: 50px;
+    border-radius: 1rem;
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0.4;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+
+    }
+}
+
+.img1 {
+    background-image: url("Currency\ Converter.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.img2 {
+    background-image: url("Rock\ Paper\ Scissors.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.img3 {
+    background-image: url("GitHub\ login\ page.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.img4 {
+    background-image: url("Partial\ Clone\ of\ edX.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.aboutMe {
+    display: grid;
+    place-items: center;
+    margin-top: 50px;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+    padding: 20px;
+    box-shadow: 0px -5px 5px #a8dadc;
+}
+
+.line {
+    display: grid;
+    padding-left: 12.5px;
+    margin: 15px 5px 20px 5px;
+    border-left: 2px solid #780000;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.contact>h2 {
+    color: #780000;
+    margin-right: 10px;
+}
+
+.education>h2 {
+    font-size: 1.6rem;
+    color: #780000;
+}
